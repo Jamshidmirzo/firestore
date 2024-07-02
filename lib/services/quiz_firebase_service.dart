@@ -6,4 +6,9 @@ class QuizFirebaseService {
   Stream<QuerySnapshot> getProduct() async* {
     yield* _quizCOntorller.snapshots();
   }
+
+  void update(String newtitle, String id) {
+    _quizCOntorller.doc(id).update({});
+  }
+  
 }
